@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+    html {
+        zoom: 0.75;
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 25px;
+        font-size: 14px;
+        line-height: 16px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #333;
+    }
+    
+    .table-border {
+        border: solid 1px #000000;
+    }
+    table.table-border {
+        border-collapse: collapse;
+    }
+    .table-border td {
+        border: solid 1px #000000;
+    }
+
+    table, tr, td {
+        border: 0;
+        width: 100%;
+    }
+    .d-flex {
+        display: flex;
+    }
+    .text-right {
+        text-align: right;
+    }
+    .mt-0 {
+        margin-top: 0px;
+    }
+    .w-50 {
+        width: 50%;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table cellpadding="0" cellspacing="0" style="padding: 40px 0 0 0;">
+            <!-- LOGO And business details -->
+            <tr>
+                <td style="width:25%;" valign="top">
+                    <img src="http:localhost:5000/img/main-logo.png" alt="logo" width="160" />
+                </td>
+                <td style="width:45%;" valign="top">
+                    <h2 class="mt-0" style="margin-bottom: 0px;">Auto Union Warranties Ltd.</h2>
+                    <div class="d-flex">
+                        <span>Unit 28, Bumpers Lane,</span>
+                    </div>
+                    <div class="d-flex">
+                        <span>Sealand Industrial Estate,</span>
+                    </div>
+                    <div class="d-flex">
+                        <span>Chester</span>
+                    </div>
+                    <div class="d-flex">
+                        <span>CH1 4LT</span>
+                    </div>
+                    <div class="d-flex" style="margin-top: 8px;">
+                        <span>VAT Number: 249273287</span>
+                    </div>
+                    <div class="d-flex">
+                        <span>Company Registration Number: 10332077</span>
+                    </div>
+                </td>
+                <td class="text-right" valign="bottom">
+                    <div><span style="font-size: 16px"><b>Date: {{claimdate}}</b></span></div>
+                    <div><span style="font-size: 16px"><b>Claim No: {{claimnumber}}</b></span></div>
+                </td>
+            </tr>
+        </table>
+        <!-- table body -->
+        <table class="table-border" cellpadding="4" cellspacing="4" style="margin: 10px 0 0 0;">
+            <tr>
+                <td style="width: 15%;">
+                    Agreement
+                </td>
+                <td style="width: 35%;">
+                    {{agreement}}
+                </td>
+                <td style="width: 15%;">
+                    Customer
+                </td>
+                <td style="width: 35%;">
+                    {{claimname}}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Vehicle: {{vehicleinfo}}
+                </td>
+                <td colspan="2">
+                    {{claimaddr}}
+                </td>
+            </tr>
+        </table>
+
+        <div class="d-flex" style="margin-top: 20px;"><span style="font-size: 16px"><b>Details</b></span></div>
+        <table class="table-border" cellpadding="4" cellspacing="4" style="margin: 10px 0 0 0;">
+            <tr>
+                <td style="width: 15%;">
+                    Mileage
+                </td>
+                <td style="width: 35%;">
+                    {{mileage}}
+                </td>
+                <td style="width: 15%;">
+                    Failed Area
+                </td>
+                <td style="width: 35%;">
+                    {{failedarea}}
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 15%;">
+                    Failed Part
+                </td>
+                <td style="width: 35%;">
+                    {{failedpart}}
+                </td>
+                <td style="width: 15%;">
+                    Labour / hr
+                </td>
+                <td style="width: 35%;">
+                    {{labourperhour}}
+                </td>
+            </tr>
+        </table>
+
+        <div class="d-flex" style="margin-top: 20px;"><span style="font-size: 16px"><b>Cause of Failure & Repairs Required</b></span></div>
+        <table class="table-border" cellpadding="4" cellspacing="4" style="margin: 10px 0 0 0;">
+            <tr>
+                <td style="width: 100%; height: 100px;" valign="top">
+                    {{failurecause}}
+                </td>
+            </tr>
+        </table>
+
+        <div class="d-flex" style="margin-top: 20px;"><span style="font-size: 16px"><b>Parts</b></span></div>
+        <table class="table-border" cellpadding="4" cellspacing="4" style="margin: 10px 0 0 0;">
+            <tr>
+                <td style="width: 20%;">
+                    Part No.
+                </td>
+                <td style="width: 10%;">
+                    Qty
+                </td>
+                <td style="width: 10%;">
+                    Price
+                </td>
+                <td style="width: 60%;">
+                    Description
+                </td>
+            </tr>
+            {{claimparts}}
+        </table>
+
+        <div class="d-flex" style="margin-top: 20px;"><span style="font-size: 16px"><b>Labour</b></span></div>
+        <table class="table-border" cellpadding="4" cellspacing="4" style="margin: 10px 0 0 0;">
+            <tr>
+                <td style="width: 20%;">
+                    Hours
+                </td>
+                <td style="width: 10%;">
+                    Price
+                </td>
+                <td style="width: 70%;">
+                    Description
+                </td>
+            </tr>
+            {{claimlabours}}
+        </table>
+
+        <div class="d-flex" style="margin-top: 20px;"><span style="font-size: 16px"><b>VAT: {{vat}}</b></span></div>
+        <div class="d-flex" style="margin-top: 10px;"><span style="font-size: 16px"><b>Total</b></span></div>
+        <table class="table-border" cellpadding="4" cellspacing="4" style="margin: 10px 0 0 0;">
+            <tr>
+                <td style="width: 20%;">
+                    Parts Total
+                </td>
+                <td style="width: 30%;">
+                    {{partstotal}}
+                </td>
+                <td style="width: 20%;">
+                    VAT Amount
+                </td>
+                <td style="width: 30%;">
+                    {{claimvatamt}}
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 20%;">
+                    Labour Total
+                </td>
+                <td style="width: 30%;">
+                    {{labourtotal}}
+                </td>
+                <td style="width: 20%;">
+                    Invoiced Total
+                </td>
+                <td style="width: 30%;">
+                    {{calculatedtotal}}
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 20%;">
+                    AU Parts
+                </td>
+                <td style="width: 30%;">
+                    {{adjustedclaim}}
+                </td>
+                <td style="width: 20%;">
+                    <b>Claim Total</b>
+                </td>
+                <td style="width: 30%;">
+                    {{claimtotal}}
+                </td>
+            </tr>
+        </table>
+
+        <!-- table footer -->
+        <table cellpadding="0" cellspacing="0" style="margin: 30px 0 0 0;">
+            <tr>
+                <td style="width:70%;" valign="top">
+                    <div class="d-flex">
+                        <span>Guarantee Holder Signature:</span>
+                        <span>_________________________</span>
+                    </div>
+                </td>
+                <td class="text-right" style="widows: 30%;" valign="top">
+                    <div class="d-flex">
+                        <span>Date:</span>
+                        <span>_______________________</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="d-flex" style="margin-top: 20px;">
+            <span style="font-size: 16px">
+                To make a claim, contact us on 0845 501 0002<br>
+                or email claims@auwarranties.co.uk
+            </span>
+        </div>
+    </div>
+</body>
+</html>

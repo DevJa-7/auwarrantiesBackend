@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<style>
+	.col1 { width:200px; border:1px solid black; padding: 5px;}
+	.col2 { width:350px; border:1px solid black; padding: 5px;}
+	.buttonvisible { height: 50px; width: 150px; visibility: visible; }
+	.buttoninvisible{ visibility: hidden;}
+	.linkvisible{font-size:13pt;}
+	.linkinvisible{visibility:hidden;}
+	</style>
+</head>
+
+<body style="background-color: rgb(250,255,250);">
+	<div style = "width:650px;text-align:justify; text-justify: inter-word;">
+		<table cellspacing = "0" style= "width:550px;border: 1px solid black; " >
+			
+			<tr>
+				<td class="col1">Dealer</td>
+				<td class="col2">{{nameofdealer}}</td>
+			</tr>
+			
+			<tr>
+				<td class="col1">Dealer Contact</td>
+				<td class="col2">Email: {{emailofdealer}} <br/>Phone: {{phoneofdealer}}</td>
+			</tr>	
+			
+			<tr>
+				<td class="col1">Customer Name</td>
+				<td class="col2">{{nameofcustomer}}</td>
+			</tr>
+
+			<tr>
+				<td class="col1">Policy date</td>
+				<td class="col2">{{policydate}}</td>
+			</tr>
+			
+			<tr>
+				<td class="col1">Policy</td>
+				<td class="col2">{{policytype}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Duration</td>
+				<td class="col2">{{policyduration}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Claim amount</td>
+				<td class="col2">{{policyclaimamt}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Contact telephone</td>
+				<td class="col2">{{telephone}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Email</td>
+				<td class="col2">{{email}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Registration & Policynumber</td>
+				<td class="col2">{{reg}}</td>
+			</tr>
+
+			<tr>
+				<td class="col1">Mileage at Sale</td>
+				<td class="col2">{{mileageatclaim}}</td>
+			</tr>
+
+			<tr>
+				<td class="col1">Current Mileage</td>
+				<td class="col2">{{mileage}}</td>
+			</tr>
+
+			<tr>
+				<td class="col1">Dates of Last 2 Services</td>
+				<td class="col2">{{dateofservices}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Fault Description</td>
+				<td class="col2">{{faultdescription}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Fault Diagnosed from VAT Registered Garage?</td>
+				<td class="col2">{{diagnosticsfrom}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Have They Been Adviced to Have Fault Diagnosed?</td>
+				<td class="col2">{{advicedfordiag}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Have You Confirmed With the Garage This Is a Warranty Claim, We Often Supply Our Own Parts and They Are Willing to Work With Us?</td>
+				<td class="col2">{{confirmwarrantyclaim}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Has Customer Been Advised to Send Diagnostic and Quote to auwarranties@outlook.com?</td>
+				<td class="col2">{{customeradvicedtosenddiag}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Does Customer Have a Policy Booklet?</td>
+				<td class="col2">{{hasbooklet}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Repairing Garage Details.</td>
+				<td class="col2">{{garagedetails}}</td>
+			</tr> 
+			<tr>
+				<td class="col1">Additional Comments.</td>
+				<td class="col2">{{comments}}</td>
+			</tr>
+
+		</table> 
+
+		{{repdata}}
+
+		<!-- <table cellspacing = "0" style= "width:550px;border: 1px solid black; " >
+			
+			<tr>
+				<p style = "text-size: 14pt;"><b>Details from AU</b></p>
+			</tr> 
+			<tr>
+				<td class="col1">Is it a covered item?</td>
+				<td class="col2">{{isitcovereditem}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Are these customer quotes or our quotes?</td>
+				<td class="col2">{{customerquotesorourquotes}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Office Recommendation</td>
+				<td class="col2">{{officerecommendation}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Have the repairs already been completed?</td>
+				<td class="col2">{{repairscompleted}}</td>
+			</tr>
+			<tr>
+				<td class="col1">Diagnostics attached or garage email below?</td>
+				<td class="col2">{{diagnosticsattached}}</td>
+			</tr> 
+		</table>  -->
+	<!--
+	<div style="width:550px; text-align:right;">
+		<button class=buttoninvisible > <a style="font-size:13pt;" href="http://127.0.0.1:8081/?claimresponse=3850">Respond</a></button>
+	</div>-->
+	</div>
+</body>
+</html>

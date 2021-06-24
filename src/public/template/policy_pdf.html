@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+    html {
+        zoom: 0.75;
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 25px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #333;
+    }
+    
+    .table-border {
+        border: 0;
+    }
+
+    table, tr, td {
+        border: 0;
+        width: 100%;
+    }
+    .d-flex {
+        display: flex;
+    }
+    .text-right {
+        text-align: right;
+    }
+    .mt-0 {
+        margin-top: 0px;
+    }
+    .w-50 {
+        width: 50%;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table cellpadding="0" cellspacing="0" style="padding: 40px 0 0 0;">
+            <!-- LOGO And business details -->
+            <tr>
+                <td style="width:60%;" valign="top">
+                    <h2 class="mt-0">{{branchname}}</h2>
+                    <div class="d-flex">
+                        <span class="w-50">{{branchadd1}}</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="w-50">{{branchadd2}} {{branchadd3}}</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="w-50">{{branchpost}}</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="w-50">{{branchlocation}}</span>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div><span>Date: {{policydate}}</span></div>
+                    <div><span><b>No: {{policynumber}}</b></span></div>
+                    <img src="{{logo}}" alt="logo" width="{{logowidth}}" />
+                </td>
+            </tr>
+        </table>
+        <!-- table body -->
+        <table cellpadding="0" cellspacing="0" style="padding: 30px 0 0 0;">
+            <tr>
+                <td style="width:50%;" valign="top">
+                    <h2 class="mt-0">Custom Details</h2>
+                    <div class="d-flex">
+                        <span class="w-50">{{policyname}}</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="w-50">{{custadd1}}</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="w-50">{{custadd2}}</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="w-50">{{custadd3}}</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="w-50">{{custpostcode}}</span>
+                    </div>
+                    <div class="d-flex">
+                        <span class="w-50">{{custhometel}}</span>
+                    </div>
+                </td>
+                <td valign="top" rowspan="2">
+                    <h2 class="mt-0">Vehicle Details</h2>
+                    <table cellpadding="0" cellspacing="0" >
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">VRM:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{vrm}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">VIN:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{vin}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Make:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{carmake}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Model:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{carmodel}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Car Type:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{cartype}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Engine Capacity(cc):</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{enginecapacity}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Trasmission:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{transmission}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Fuel Type:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{fueltype}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Registration Date:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{regdate}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Purchase Date:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{purchasedate}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Mileage:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{mileage}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Purchase Price:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{purchaseprice}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">4 x 4:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{fourbyfour}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Luxury:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{luxury}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Specialist:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{specialist}}</span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%;" valign="bottom">
+                    <h2 class="mt-0">Guarantee Details</h2>
+                    <table cellpadding="0" cellspacing="0" >
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Start Date:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{startdate}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Cover Type:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{covertype}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Vehicle Category:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{vehiclecategory}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Duration:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{duration}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Claim Limit:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{claimlimitamount}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%;">
+                                <span class="w-50">Retail Price:</span>
+                            </td>
+                            <td style="width:50%;">
+                                <span class="w-50">{{retailprice}}</span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+        </table>
+
+        <!-- table footer -->
+        <table cellpadding="0" cellspacing="0" style="padding: 40px 0 0 0;">
+            <tr>
+                <td style="width:50%;" valign="top">
+                    <div class="d-flex">
+                        <span>Dealer Signature:</span>
+                        <span>_________________________</span>
+                    </div>
+                </td>
+                <td style="width:50%;" valign="top">
+                    <div class="d-flex">
+                        <span>Customer Signature:</span>
+                        <span>_______________________</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="width:50%;" valign="top">
+                    <div class="d-flex">
+                        <span>Date (dd-mm-yyyy):</span>
+                        <span>_______________________</span>
+                    </div>
+                </td>
+                <td style="width:50%;" valign="top">
+                    <div class="d-flex">
+                        <span>Date(dd-mm-yyyy):</span>
+                        <span>________________________</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- table for motor protector -->
+        {{motorprotect}}
+    </div>
+</body>
+</html>
